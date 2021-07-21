@@ -15,8 +15,4 @@ use App\Http\Controllers\AlbumsController;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
-
 Route::get('albums/{album}/photos',[AlbumsController::class, 'show']);
